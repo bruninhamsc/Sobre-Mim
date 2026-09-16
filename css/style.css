@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #0f1114;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.5s ease;
+}
+
+/* Transição do fundo rosa suave */
+.content.active {
+  background: radial-gradient(circle at center, #ffb3c6 0%, #ff85a1 100%);
+}
+
+.card-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Formato do SVG do Coração */
+.heart-svg {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  fill: #ff4d6d;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* Botão Click Me */
+.btn-click {
+  position: absolute;
+  z-index: 3;
+  color: #ff4d6d;
+  background: #ffb3c6;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+}
+
+/* Bloco de Código de Dentro */
+.card-inside {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+}
+
+.card-inside pre {
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ESTADO ATIVO (AO CLICAR) */
+
+/* O coração cresce em um formato perfeito por trás do código */
+.card-wrapper.active .heart-svg {
+  transform: scale(2.8);
+}
+
+/* Sumir o botão Click Me */
+.card-wrapper.active .btn-click {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Revelar o bloco de código */
+.card-wrapper.active .card-inside {
+  opacity: 1;
+  transform: scale(1.1);
+  z-index: 4;
+}

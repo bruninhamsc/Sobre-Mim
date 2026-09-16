@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="content">
+    <div class="card-wrapper">
+      
+      <!-- Coração de fundo feito em SVG (Formato Perfeito) -->
+      <svg class="heart-svg" viewBox="0 0 32 29.6">
+        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,16,21.2,16,21.2s16-11.8,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+      </svg>
+
+      <!-- Botão inicial fechado -->
+      <div class="btn-click">Click Me</div>
+
+      <!-- Caixa com o código JS -->
+      <div class="card-inside">
+        <pre><code class="language-javascript">console.log(
+  "I Love You"
+);</code></pre>
+      </div>
+
+    </div>
+  </div>
+
+  <audio id="bg-audio" src="musica.mp3" loop></audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script src="javascript/script.js"></script>
+</body>
+</html>
